@@ -1,6 +1,5 @@
 import _ from "lodash";
-import { config, ConfigKey } from "./config";
-import { Stage } from "./types";
+import { Stage, config, ConfigKey, getOrThrow } from "@dendronhq/common-all";
 
 export function getStage(): Stage {
   // CRA overrides NODE_ENV to be dev by default
@@ -27,22 +26,9 @@ export function getStage(): Stage {
   return stageOut as Stage;
 }
 
-export function getOrThrow<T = any>(
-  obj: T,
-  k: keyof T,
-  opts?: { shouldThrow?: boolean }
-) {
-  opts = _.defaults(opts, { shouldThrow: true });
-  const maybeValue = obj[k];
-  if (_.isUndefined(maybeValue) && opts.shouldThrow) {
-    throw Error(`no ${k} in ${JSON.stringify(obj)}`);
-  }
-  return maybeValue;
-}
-
 export function setStageIfUndefined(newStage: Stage) {
   const { stage, NODE_ENV, STAGE, REACT_APP_STAGE, BUILD_STAGE } = process.env;
-  let stageOut = REACT_APP_STAGE || BUILD_STAGE || stage || STAGE || NODE_ENV;
+  const stageOut = REACT_APP_STAGE || BUILD_STAGE || stage || STAGE || NODE_ENV;
   if (_.isUndefined(stageOut)) {
     process.env.stage = newStage;
   }

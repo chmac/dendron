@@ -3,11 +3,11 @@ import {
   AssetGetThemeRequest,
   DendronError,
   ERROR_STATUS,
-  getStage,
   RespV2,
   ThemeTarget,
   ThemeType,
 } from "@dendronhq/common-all";
+import { getStage } from "@dendronhq/common-server";
 import { WorkspaceUtils } from "@dendronhq/engine-server";
 import { getWSEngine } from "../utils";
 import fs from "fs-extra";

@@ -865,3 +865,16 @@ export function cleanName(name: string): string {
 export function normalizeUnixPath(fsPath: string): string {
   return path.posix.format(path.parse(fsPath));
 }
+
+export function getOrThrow<T = any>(
+  obj: T,
+  k: keyof T,
+  opts?: { shouldThrow?: boolean }
+) {
+  opts = _.defaults(opts, { shouldThrow: true });
+  const maybeValue = obj[k];
+  if (_.isUndefined(maybeValue) && opts.shouldThrow) {
+    throw Error(`no ${k} in ${JSON.stringify(obj)}`);
+  }
+  return maybeValue;
+}

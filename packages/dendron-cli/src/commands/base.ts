@@ -4,7 +4,6 @@ import {
   isDendronResp,
   RespV3,
   config,
-  RuntimeUtils,
   ConfigUtils,
   DENDRON_EMOJIS,
 } from "@dendronhq/common-all";
@@ -13,6 +12,7 @@ import {
   getDurationMilliseconds,
   SegmentClient,
   TelemetryStatus,
+  RuntimeUtils,
 } from "@dendronhq/common-server";
 import {
   ALL_MIGRATIONS,

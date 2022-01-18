@@ -1,4 +1,4 @@
-import { env } from "@dendronhq/common-all";
+import { env } from "@dendronhq/common-server";
 import { AssertUtils } from "@dendronhq/common-test-utils";
 import { ENGINE_HOOKS } from "@dendronhq/engine-test-utils";
 import fs from "fs-extra";

@@ -1,4 +1,4 @@
-import { getStage } from "@dendronhq/common-all";
+import { getStage } from "@dendronhq/common-server";
 import { IConnection, WorkspaceFolder } from "vscode-languageserver";
 import { getSettings } from "./settings";
 import path from "path";

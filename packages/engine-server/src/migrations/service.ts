@@ -1,11 +1,14 @@
 import {
   IntermediateDendronConfig,
-  getStage,
   InstallStatus,
   WorkspaceSettings,
   ConfigUtils,
 } from "@dendronhq/common-all";
-import { createDisposableLogger, DLogger } from "@dendronhq/common-server";
+import {
+  createDisposableLogger,
+  DLogger,
+  getStage,
+} from "@dendronhq/common-server";
 import _ from "lodash";
 import semver from "semver";
 import { WorkspaceService } from "../workspace";

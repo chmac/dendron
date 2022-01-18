@@ -1,4 +1,5 @@
-import { DendronEditorViewKey, getStage } from "@dendronhq/common-all";
+import { DendronEditorViewKey } from "@dendronhq/common-all";
+import { getStage } from "@dendronhq/common-server";
 import _ from "lodash";
 import { env, Uri, ViewColumn, window } from "vscode";
 import { DENDRON_COMMANDS } from "../constants";
@@ -9,7 +10,6 @@ import { BasicCommand } from "./base";
 type CommandOpts = {};
 
 type CommandOutput = void;
-
 
 async function getWebviewContent2(opts: { title: string }) {
   const port = getExtension().port;

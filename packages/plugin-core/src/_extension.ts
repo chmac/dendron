@@ -9,7 +9,6 @@ import {
   DendronError,
   DWorkspaceV2,
   ExtensionEvents,
-  getStage,
   InstallStatus,
   MigrationEvents,
   NativeWorkspaceEvents,
@@ -24,6 +23,7 @@ import {
   initializeSentry,
   SegmentClient,
   writeJSONWithComments,
+  getStage,
 } from "@dendronhq/common-server";
 import {
   FileAddWatcher,

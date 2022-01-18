@@ -6,7 +6,6 @@ import {
   DendronTreeViewKey,
   DWorkspaceV2,
   ERROR_STATUS,
-  getStage,
   ResponseUtil,
   WorkspaceSettings,
   WorkspaceType,
@@ -16,6 +15,7 @@ import {
   readJSONWithCommentsSync,
   resolvePath,
   writeJSONWithComments,
+  getStage,
 } from "@dendronhq/common-server";
 import {
   HistoryService,

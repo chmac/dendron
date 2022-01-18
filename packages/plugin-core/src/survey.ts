@@ -1,4 +1,5 @@
-import { getStage, SurveyEvents } from "@dendronhq/common-all";
+import { SurveyEvents } from "@dendronhq/common-all";
+import { getStage } from "@dendronhq/common-server";
 import { AnalyticsUtils } from "./utils/analytics";
 import * as vscode from "vscode";
 import _ from "lodash";

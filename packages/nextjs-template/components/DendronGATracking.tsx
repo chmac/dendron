@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { initGA, logPageView } from "../utils/analytics";
-import { getStage } from "@dendronhq/common-all";
 import { useEngineAppSelector } from "../features/engine/hooks";
 import _ from "lodash";
 import { useRouter } from "next/router";
@@ -28,7 +27,8 @@ export const useDendronGATracking = () => {
     const logger = createLogger("gaTracking");
     if (!_.isUndefined(config)) {
       const { ga_tracking: gaTracking } = config.site;
-      if (gaTracking && gaType === GAType.NONE && getStage() !== "dev") {
+      // TODO: can't use `getStage` in browser because it needs `process.env` which isn't available
+      if (gaTracking && gaType === GAType.NONE /*&& getStage() !== "dev"*/) {
         const newGaType = getGAType(gaTracking);
         initGA(gaTracking, newGaType);
         setGAType(newGaType);

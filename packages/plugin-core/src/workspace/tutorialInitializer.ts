@@ -2,11 +2,10 @@ import {
   DendronError,
   DVault,
   DWorkspaceV2,
-  getStage,
   TutorialEvents,
   VaultUtils,
 } from "@dendronhq/common-all";
-import { vault2Path } from "@dendronhq/common-server";
+import { vault2Path, getStage } from "@dendronhq/common-server";
 import fs from "fs-extra";
 import path from "path";
 import rif from "replace-in-file";

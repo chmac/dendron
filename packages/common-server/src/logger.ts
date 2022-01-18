@@ -1,6 +1,7 @@
 // import pino from "pino";
 
-import { Disposable, env } from "@dendronhq/common-all";
+import { Disposable } from "@dendronhq/common-all";
+import { env } from "./env";
 import _ from "lodash";
 import pino from "pino";
 

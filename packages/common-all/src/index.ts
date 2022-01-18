@@ -5,7 +5,6 @@ import minimatch from "minimatch";
 export * from "./colors";
 export * from "./dnode";
 export * from "./helpers";
-export * from "./env";
 export * from "./assert";
 export * from "./uuid";
 export * from "./constants";

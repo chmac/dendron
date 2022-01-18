@@ -6,7 +6,6 @@ import {
   DVault,
   GetNoteOpts,
   getSlugger,
-  getStage,
   NotePropsDict,
   NoteProps,
   NoteUtils,
@@ -14,6 +13,7 @@ import {
   ConfigUtils,
   FIFOQueue,
 } from "@dendronhq/common-all";
+import { getStage } from "@dendronhq/common-server";
 // @ts-ignore
 import mermaid from "@dendronhq/remark-mermaid";
 // @ts-ignore

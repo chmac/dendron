@@ -3,9 +3,9 @@ import {
   DendronError,
   DendronSiteConfig,
   error2PlainObject,
-  getStage,
   Stage,
 } from "@dendronhq/common-all";
+import { getStage } from "@dendronhq/common-server";
 import { SiteUtils } from "@dendronhq/engine-server";
 import {
   NextjsExportConfig,

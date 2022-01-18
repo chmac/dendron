@@ -2,8 +2,8 @@ import {
   assertUnreachable,
   ConfigUtils,
   DendronSiteConfig,
-  getStage,
 } from "@dendronhq/common-all";
+import { getStage } from "@dendronhq/common-server";
 import { execa } from "@dendronhq/engine-server";
 import {
   NextjsExportConfig,

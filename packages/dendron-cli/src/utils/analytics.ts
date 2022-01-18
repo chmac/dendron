@@ -1,5 +1,4 @@
-import { RuntimeUtils } from "@dendronhq/common-all";
-import { SegmentUtils } from "@dendronhq/common-server";
+import { SegmentUtils, RuntimeUtils } from "@dendronhq/common-server";
 import { CLIUtils } from "./cli";
 
 export class CLIAnalyticsUtils {

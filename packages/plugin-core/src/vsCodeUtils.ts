@@ -1,14 +1,18 @@
 import {
   CONSTANTS,
   DendronError,
-  getStage,
   InstallStatus,
   newRange,
   Point,
   Position,
   VSRange,
 } from "@dendronhq/common-all";
-import { goUpTo, resolvePath, tmpDir } from "@dendronhq/common-server";
+import {
+  goUpTo,
+  resolvePath,
+  tmpDir,
+  getStage,
+} from "@dendronhq/common-server";
 import _ from "lodash";
 import _md from "markdown-it";
 import os from "os";
